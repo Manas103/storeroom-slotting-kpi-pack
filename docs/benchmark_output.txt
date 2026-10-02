@@ -1,0 +1,31 @@
+=== Storeroom Slotting, Travel-Distance Study and Inventory KPI Pack ===
+Bins: 4000  Materials: 3200  Picks: 90000
+
+Generated 4000 bins, 3200 materials, 90000 picks.
+Baseline and reslotted assignments built for 3200 materials, both respecting each bin's capacity limit.
+Sampled 1000 pick lists (size 3-8) for the brute-force optimal-pick-order oracle.
+
+=== Travel-distance benchmark (oracle-optimal order, mean per pick list) ===
+  baseline layout:   581.18 ft
+  reslotted layout:  325.20 ft
+  reduction: 44.0%
+  pick lists where reslotting lost to baseline: 37 of 1000
+  heuristic-below-oracle violations (baseline): 0
+  heuristic-below-oracle violations (reslotted): 0
+
+Running 180-day (s, S) inventory simulation for KPI computation...
+
+=== Six published KPIs ===
+  inventory_accuracy: 94.5 %  (lineage rows: 800)  cycle-count audit sample: 800 of 3200 materials
+  fill_rate: 89.1036 %  (lineage rows: 54694)  material-days with nonzero requested quantity; fulfilled_qty capped at that day's opening on-hand
+  availability: 94.8498 %  (lineage rows: 576000)  share of material-days where on-hand at day start was greater than zero
+  consumption_trend: 0.5476 % change, first half vs second half of window  (lineage rows: 90000)  first-half total qty=156879, second-half total qty=157738
+  dead_stock: 0.2812 % of materials  (lineage rows: 9)  9 of 3200 materials had zero picks across the 180-day window
+  stockout_days: 29665.0 material-days  (lineage rows: 29665)  count of (material, day) rows where on-hand at day start was exactly zero
+KPI lineage coverage: 100.0% (6 of 6 KPIs have at least one backing row)
+
+Building the 5S bin-label audit workbook...
+  4000 bins, 149 missing a label (3.73%)
+  workbook written: C:\Users\Manas\Downloads\Total Job Application process flow\projects\storeroom-slotting-kpi-pack\scripts\..\artifacts\5s_audit.xlsx
+
+Total wall time: 35.30s

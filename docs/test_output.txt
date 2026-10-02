@@ -1,0 +1,18 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Manas\Downloads\Total Job Application process flow\projects\storeroom-slotting-kpi-pack\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Manas\Downloads\Total Job Application process flow
+configfile: pytest.ini
+collecting ... collected 9 items
+
+tests\test_ssk.py::test_bin_count_and_coords_match_reference PASSED      [ 11%]
+tests\test_ssk.py::test_baseline_and_reslotted_respect_bin_capacity PASSED [ 22%]
+tests\test_ssk.py::test_reslotted_puts_high_frequency_materials_closer_to_entrance PASSED [ 33%]
+tests\test_ssk.py::test_oracle_hand_verifiable_two_bin_case PASSED       [ 44%]
+tests\test_ssk.py::test_oracle_raises_above_its_bounded_size PASSED      [ 55%]
+tests\test_ssk.py::test_heuristic_never_beats_the_oracle PASSED          [ 66%]
+tests\test_ssk.py::test_oracle_sample_lists_are_within_bounds PASSED     [ 77%]
+tests\test_ssk.py::test_kpi_lineage_coverage_is_complete PASSED          [ 88%]
+tests\test_ssk.py::test_5s_audit_workbook_accounts_for_every_bin PASSED  [100%]
+
+============================== 9 passed in 6.38s ==============================
